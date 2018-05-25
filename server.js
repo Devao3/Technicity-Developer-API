@@ -21,7 +21,7 @@ mongoose.connect(
 );
 
 var Technicity = require("./app/models/technicity");
-var path = require("path");
+const path = require("path");
 
 router.get("/", function(req, res) {
   res.json({
@@ -31,10 +31,10 @@ router.get("/", function(req, res) {
   // res.sendFile(path.join(__dirname+'/index.html'));
 });
 
-router.use(function(req, res, next) {
-  console.log("Log for request...");
-  next();
-});
+// router.use(function(req, res, next) {
+//   console.log("Log for request...");
+//   next();
+// });
 
 router
   .route("/technicity")

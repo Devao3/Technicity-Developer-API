@@ -3,6 +3,7 @@ const request = require("superagent");
 const config = require("../configuration/config");
 const baseUrl = `http://localhost:${config.port}`;
 let devId;
+
 describe("Augie Tests", function(done) {
   it("should get root", () => {
     return request
@@ -30,7 +31,6 @@ describe("Augie Tests", function(done) {
       .get(`${baseUrl}/api/devforhire/${devId}`)
       .send()
       .then(res => {
-        console.log(res.body);
         expect(res.status).to.equal(200);
       });
   });
