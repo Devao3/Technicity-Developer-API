@@ -1,6 +1,10 @@
 # Technicity Developer API
 
-This was created with Express for Node.JS
+This was created with Express, Node.JJ, and MongoDB
+
+##Database
+
+Database is live at: mongodb://augieortiz:DevAO1@ds135760.mlab.com:35760/technicityapi
 
 ## Getting Started
 
