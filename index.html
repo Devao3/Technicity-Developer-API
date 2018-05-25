@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1> Technicity Developer API</h1>
+	<p>Welcome to the Technicity Developer API. You can hire, fire, or view a list of developers.</p>
+	<br>
+	<p>Database is live at: mongodb://augieortiz:DevAO1@ds135760.mlab.com:35760/technicityapi</p>
+	<p>Browser responds in json and plain text.</p>
+	<br>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-yw4l{vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-031e">Action</th>
+    <th class="tg-yw4l"></th>
+    <th class="tg-yw4l">API Path</th>
+    <th class="tg-yw4l">Parameters</th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Hire</td>
+    <td class="tg-yw4l">POST</td>
+    <td class="tg-yw4l">http://localhost:8080/api/devforhire/</td>
+    <td class="tg-yw4l">name: String</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">View Single</td>
+    <td class="tg-yw4l">GET</td>
+    <td class="tg-yw4l">http://localhost:8080/api/devforhire/:dev_id</td>
+    <td class="tg-yw4l">dev_id: String</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">View</td>
+    <td class="tg-yw4l">GET</td>
+    <td class="tg-yw4l">http://localhost:8080/api/devforhire/</td>
+    <td class="tg-yw4l"><br></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">Fire</td>
+    <td class="tg-yw4l">DELETE</td>
+    <td class="tg-yw4l">http://localhost:8080/api/devforhire/:dev_id</td>
+    <td class="tg-yw4l">dev_id: String</td>
+  </tr>
+</table>
+</body>
+</html>
