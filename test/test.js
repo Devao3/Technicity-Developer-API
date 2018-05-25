@@ -34,4 +34,13 @@ describe("Augie Tests", function(done) {
         expect(res.status).to.equal(200);
       });
   });
+
+  it("should delete devs", () => {
+    return request
+      .del(`${baseUrl}/api/devforhire/${devId}`)
+      .send()
+      .then(res => {
+        expect(res.status).to.equal(200);
+      });
+  });
 });

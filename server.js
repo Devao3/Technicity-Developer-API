@@ -81,19 +81,10 @@ router.get("/devforhire/:dev_id", async (req, res) => {
   res.json(dev.toJSON());
 });
 
-router.delete("/devforhire/:dev_id", (req, res) => {
-  Technicity.remove(
-    {
-      _id: req.params.dev_id
-    },
-    function(err, Technicity) {
-      if (err) res.send(err);
-
-      res.json({
-        message: "Successfully fired developer! - " + req.params.dev_id
-      });
-    }
-  );
+router.delete("/devforhire/:dev_id", async (req, res) => {
+  let t = new Technicity({ _id: req.params.dev_id });
+  let dev = await t.remove();
+  res.json(dev);
 });
 
 app.use("/api", router);
